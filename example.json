@@ -1,0 +1,9 @@
+{
+    "Device 1": {
+        "email1@gmail.com": "1234567891",
+        "email2@gmail.com": "1234567892"
+    },
+    "Device 2": {
+        "email3@gmail.com": "1234567893"
+    }
+}
