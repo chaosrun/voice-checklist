@@ -4,6 +4,8 @@ This script is used to assist with Google Voice's numbers retention checks,
 to help with manual operations, 
 and to prompt for basic information about the accounts to be viewed.
 
+[中文说明](./README_CN.md)
+
 ## Preparation
 
 Enter the information about the accounts in the JSON file according to the following format:

@@ -2,6 +2,8 @@
 
 本脚本用于协助 Google Voice 的号码保活检查，辅助人工操作，可提示待查看账号的基本信息。
 
+[English instruction](./README.md)
+
 ## 准备
 
 根据以下的格式在 JSON 文件中录入关于账号的信息：
