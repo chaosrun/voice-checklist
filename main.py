@@ -1,5 +1,5 @@
-import argparse
 import json
+from argparse import ArgumentParser, Namespace
 from os.path import expanduser
 from typing import Dict
 
@@ -24,7 +24,9 @@ def print_info(path: str):
 
     # Print numbers by device
     for device in numbers_dict:
-        for i in range(the_count := len(the_list := list(numbers_dict[device]))):
+        the_list = list(numbers_dict[device])
+        the_count = len(the_list)
+        for i in range(the_count):
             answer = ""
             while answer != "y":
                 print(f"Device:\t{device} ({i + 1:0>2}/{the_count:0>2})")
@@ -72,7 +74,7 @@ def search_info(path: str, query: str) -> bool:
     return False
 
 
-def main(params: argparse.Namespace):
+def main(params: Namespace):
     if not params.f:
         return False
 
@@ -83,20 +85,9 @@ def main(params: argparse.Namespace):
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-f",
-        type=str,
-        nargs="?",
-        default="example.json",
-        help="file path"
-    )
-    parser.add_argument(
-        "-s",
-        type=str,
-        nargs="?",
-        help="search information"
-    )
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("-f", type=str, nargs="?", default="example.json", help="file path")
+    parser.add_argument("-s", type=str, nargs="?", help="search information")
     args = parser.parse_args()
     main(args)

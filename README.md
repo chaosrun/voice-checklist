@@ -1,31 +1,33 @@
 # voice-checklist
 
-本脚本用于协助 Google Voice 的号码保活检查，辅助人工操作，可提示待查看账号的基本信息。
+This script is used to assist with Google Voice's numbers retention checks, 
+to help with manual operations, 
+and to prompt for basic information about the accounts to be viewed.
 
-## 准备
+## Preparation
 
-根据以下的格式在 JSON 文件中录入关于账号的信息：
+Enter the information about the accounts in the JSON file according to the following format:
 
 ```json
 {
-    "登录设备名称": {
-        "邮箱": "号码"
+    "Login Device Name": {
+        "Email": "Number"
     }
 }
 ```
 
-示例：可参见 [example.json](./example.json) 的内容。
+Example: See [example.json](. /example.json).
 
-## 用法
+## Usage
 
-开始辅助检查：
-
-```
-python3 main.py -f "JSON 文件路径"
-```
-
-搜索指定邮箱或者号码的信息：
+Start checklist:
 
 ```
-python3 main.py -f "JSON 文件路径" -s "example1@gmail.com"
+python main.py -f "JSON file path"
+```
+
+Search for information on a given email or number:
+
+```
+python main.py -f "JSON file path" -s "example1@gmail.com"
 ```
